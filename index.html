@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do código à linha de chegada | CorridaS</title>
+  <meta name="description" content="Portfólio de um estudante de Ciência da Computação que treina triathlon: modalidades, calculadora de pace e contato.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Principal">
+      <a class="logo" href="#inicio">Corredor<span>Dev</span></a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="#calculadora">Calculadora</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div>
+        
+          <h1 class="hero__title">
+            <span class="swim">Corra.</span>
+            <span class="bike">Corra.</span>
+            <span class="run">Code.</span>
+          </h1>
+          <p class="lead">A cada quilômetro, você não está apenas vencendo a distância, está superando quem você era ontem.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#modalidades">Ver as modalidades</a>
+            <a class="btn btn--ghost" href="#calculadora">Calcular meu ritmo</a>
+          </div>
+        </div>
+        <figure class="hero__photo">
+          <img src="images/hero-corrida.png" width="500" height="795" alt="Atleta correndo em uma prova de rua no fim da tarde">
+        </figure>
+      </div>
+    </section>
+
+    
+    <section class="section section--alt" id="modalidades">
+      <div class="container">
+        <h2>As três modalidades</h2>
+        <p class="section__sub">Escolha o formato da prova e veja a distância de cada etapa.</p>
+
+        
+        <div class="tabs" id="formatTabs" role="group" aria-label="Formato da prova">
+          <button class="tab is-active" type="button" data-format="5km" aria-pressed="true">Prova de 5km</button>
+          <button class="tab" type="button" data-format="10km" aria-pressed="false">Prova de 10km</button>
+          <button class="tab" type="button" data-format="Meia-Maratona" aria-pressed="false">Prova de 21,097km</button>
+          <button class="tab" type="button" data-format="Maratona" aria-pressed="false">Prova de 42,195km</button>
+        </div>
+
+        <div class="lanes">
+          <article class="lane lane--swim">
+            <span class="lane__icon" aria-hidden="true">🏃</span>
+            <div class="lane__body">
+              <h3>Corrida de 5 km </h3>
+              <p>Porta de entrada para iniciantes e excelente para treinos de velocidade e ritmo (pace).</p>
+              <details><summary>Dica de prova</summary><p>Para quem está começando a treinar para os 5 km
+O maior erro de quem inicia é tentar correr rápido demais logo nas primeiras semanas, o que gera lesões por impacto e frustração cardiorrespiratória.
+
+Alterne corrida e caminhada: Não tente correr 5 km direto no primeiro dia. Comece alternando blocos ex.: 2 minutos de trote leve por 2 minutos de caminhada rápida durante 25 a 30 minutos, 3 vezes na semana. Aumente o tempo de corrida e reduza o de caminhada progressivamente a cada semana.
+
+Corra em ritmo conversacional (Zona 2): O treino de base deve ser feito em uma intensidade onde você consiga falar frases curtas sem ficar completamente ofegante. Se não consegue falar, diminua o passo mesmo que pareça lento demais.
+
+Respeite os dias de descanso: O músculo se adapta ao impacto e ganha resistência no repouso, não durante o treino. Evite correr em dias consecutivos no início; intercale com descanso ou fortalecimento.
+
+Invista no fortalecimento básico: Dedique 1 a 2 sessões na semana para fortalecer panturrilhas, quadríceps, glúteos e core pranchas, agachamentos, elevação de panturrilha. Isso protege joelhos e canelas evitando a temida canelite.
+
+Priorize conforto no calçado: Use um tênis de corrida específico, com bom amortecimento e um número ou meio número maior que o seu calçado casual, pois os pés incham durante a corrida.
+</p></details>
+            </div>
+            <p class="lane__dist" data-leg="swim">5km</p>
+          </article>
+
+          <article class="lane lane--bike">
+            <span class="lane__icon" aria-hidden="true">🏃</span>
+            <div class="lane__body">
+              <h3>corrida de 10 km </h3>
+              <p>10 km : Distância clássica intermediária, que já exige maior resistência aeróbica e estratégia de prova.</p>
+              <details><summary>Dica de prova</summary><p>Para quem está começando a correr os 10k (Treinos)
+Aumente o volume com calma (Regra dos 10%): Nunca suba sua quilometragem semanal mais do que 10% de uma semana para outra. Se você corre 15 km na semana, na próxima mire no máximo em 16,5 km. O sistema cardiovascular evolui rápido, mas tendões e articulações precisam de tempo para se adaptar.
+
+Respeite o "Longão" em Zona 2: Faça um treino mais longo por semana em ritmo bem confortável onde você consiga conversar sem perder o fôlego. Não tente bater recorde de velocidade nesse dia; o objetivo é ensinar o corpo a ficar mais tempo em movimento e usar gordura como fonte de energia.
+
+Fortaleça a base especialmente posterior e core: Nos 10 km, a fadiga postural começa a aparecer depois dos 6 ou 7 km. Priorize exercícios unilaterais afundo, agachamento búlgaro, panturrilhas, glúteos e abdômen para manter a mecânica de corrida limpa até o final.
+
+Varie os estímulos: Não corra todos os treinos no mesmo ritmo moderado. Alterne dias leves de rodagem com um dia de treino intervalado tiros curtos ou fartlek brincadeira de velocidades para ganhar eficiência biomecânica.
+
+Para quem vai fazer uma prova de 10k Estratégia de Corrida
+Divida a prova em três blocos (3-4-3):
+
+Primeiros 3 km Controle: A adrenalina da largada vai te puxar para um ritmo forte demais. Segure o passo e corra ligeiramente mais lento que o seu ritmo alvo.
+
+Km 4 ao 7 Cruzeiro: Encaixe o seu ritmo planejado, foque na respiração e mantenha a postura relaxada ombros baixos, braços soltos.
+
+Últimos 3 km Progressão: Se sobrou energia, é aqui que você acelera gradualmente até cruzar a linha de chegada.
+
+Teste a hidratação e o carboidrato antes: Provas de 10 km costumam durar entre 45 e 70 minutos. Embora não seja estritamente obrigatório suplementar durante a prova, tomar 1 gel de carboidrato por volta dos 30–35 minutos ajuda a evitar a queda de rendimento na reta final. Nunca estreie um gel ou tênis no dia da prova.
+
+Não pule os postos de hidratação: Mesmo que não sinta sede, pegue o copo de água. Dê um ou dois goles pequenos para molhar a boca e refrescar o corpo; beber muito de uma vez pesa no estômago e causa desconforto abdominal.
+
+Faça o polimento taper: Nos 4 a 5 dias que antecedem a prova, reduza o volume dos treinos em cerca de 40% a 50% e corte treinos de perna pesados na academia. Você precisa chegar na largada com os estoques de glicogênio cheios e a musculatura descansada.
+
+Aqueça antes da largada: Como o ritmo de prova é mais intenso que o de treino, faça 10 minutos de trote bem leve e alguns educativos (skipping, mobilidade de quadril) 15 minutos antes do tiro de largada para preparar o coração e evitar aquela sensação de "pernas pesadas" no primeiro quilômetro.
+</p></details>
+            </div>
+            <p class="lane__dist" data-leg="bike">10 km</p>
+          </article>
+
+          <article class="lane lane--run">
+            <span class="lane__icon" aria-hidden="true">🏃</span>
+            <div class="lane__body">
+              <h3>Corrida de 21,097km </h3>
+              <p>Meia Maratona (21,097 km): Primeira grande prova de longa distância; exige planejamento de hidratação e reposição de carboidratos.</p>
+              <details><summary>Dica de prova</summary><p>Correr uma meia maratona (21,1 km) exige uma transição de mentalidade: você deixa de depender apenas do fôlego e passa a gerenciar glicogênio, resistência muscular e disciplina de ritmo.
+
+Para quem está começando a treinar para os 21k
+Domine o "longão" em Zona 2: O treino mais importante da semana é a rodagem longa, feita em ritmo confortável onde você consegue conversar sem ofegar. Aumente a distância gradualmente máximo de 10% por semana até chegar a 16 km ou 18 km cerca de 2 a 3 semanas antes da prova. Você não precisa correr 21 km nos treinos para completar a prova.
+
+Treine a suplementação intra-treino: Acima de 75–90 minutos de corrida, os estoques de carboidrato do corpo caem drasticamente. Use os longões acima de 12 km para testar géis de carboidrato, jujubas ou isotônicos, descobrindo o que seu estômago tolera bem em movimento.
+
+Fortalecimento é inegociável: O impacto acumulado de mais de duas horas correndo cobra caro das articulações e tendões. Mantenha 2 a 3 sessões semanais de força focadas em quadríceps, posteriores, glúteos, panturrilhas e core para evitar canelite, fascite plantar e dores no joelho.
+
+Varie os estímulos na semana: Não faça todos os treinos no mesmo ritmo. Combine o longão leve com 1 treino de tiro/intervalado para melhorar a economia de corrida e 1 treino de tempo run ritmo contínuo moderadamente forte, próximo ao ritmo alvo da prova.
+
+Respeite o polimento (taper): Nas duas semanas finais antes da prova, reduza o volume total de quilômetros em 30% a 50%, mantendo apenas estímulos curtos para deixar as pernas descansadas e cheias de energia.
+
+Para o dia da prova de 21k
+Divida a prova em blocos (Estratégia 10 - 6 - 5):
+
+Km 1 ao 10: Segure o freio. A adrenalina da largada engana e faz você correr rápido demais. Corra 5 a 10 segundos por km mais devagar que seu ritmo alvo.
+
+Km 11 ao 16: Encontre seu ritmo de cruzeiro. É o trecho mentalmente mais duro; mantenha a postura e a cadência.
+
+Km 17 ao 21,1: Se sobrou perna, agora é a hora de acelerar progressivamente e buscar o tempo final.
+
+Protocolo de hidratação e carboidrato:
+
+Tome o primeiro gel de carboidrato por volta dos 35–40 minutos antes de sentir cansaço e repita a cada 30–35 minutos geralmente 2 a 3 géis na prova toda, sempre acompanhado de água nunca de isotônico, para não sobrecarregar o estômago.
+
+Não pule postos de hidratação, mesmo sem sede. Beba pequenos goles nos primeiros quilômetros para evitar desidratação tardia.
+
+Prevenção contra atrito: Em 21 km, qualquer costura mal posicionada vira assadura ou bolha. Passe vaselina sólida ou creme anti-atrito nas coxas, axilas, mamilos e pés antes de sair de casa.
+
+Nada de estreias: Use exatamente o mesmo tênis já amaciado, meias, roupas e café da manhã que você testou nos seus melhores longões.
+
+Aquecimento curto: Como a prova é longa, você não precisa de um aquecimento exaustivo. Faça 5 a 8 minutos de trote bem leve e mobilidade articular (tornozelos e quadril) 15 minutos antes da largada.
+</p></details>
+            </div>
+            <p class="lane__dist" data-leg="run">21 km</p>
+          </article>
+        </div>
+        
+         <article class="lane lane--run">
+            <span class="lane__icon" aria-hidden="true">🏃</span>
+            <div class="lane__body">
+              <h3>Corrida de 42,195km </h3>
+              <p>Maratona (42,195 km): A distância olímpica máxima das corridas de rua, exigindo meses de preparação específica e controle rigoroso de energia</p>
+              <details><summary>Dica de prova</summary><p>A maratona (42,195 km) muda completamente a lógica das distâncias anteriores. Enquanto até os 21 km você consegue "forçar" o corpo usando reservas imediatas, nos 42 km o jogo é gerenciamento de glicogênio, resistência muscular e disciplina mental.
+
+Para quem está começando a treinar para os 42k
+Base antes do volume específico: Antes de iniciar um ciclo específico de maratona (que dura de 16 a 20 semanas), tenha pelo menos 6 meses a 1 ano de consistência correndo 3 a 4 vezes na semana e já tendo completado uma meia maratona.
+
+O "Longão" sem exagero: O treino longo do fim de semana é o pilar da preparação, mas você não precisa correr 42 km nos treinos. O teto para iniciantes fica entre 30 km e 34 km, atingido cerca de 3 a 4 semanas antes da prova. Passar disso aumenta exponencialmente o risco de lesão sem trazer ganho fisiológico proporcional.
+
+Treine o estômago Gut Training: Nos longões acima de 1h30, teste exatamente os géis de carboidrato, isotônicos ou cápsulas de sal que vai usar no dia. O sistema digestivo precisa se adaptar a absorver carboidrato com o sangue desviado para as pernas.
+
+Fortalecimento é inegociável: O impacto repetitivo por 3, 4 ou 5 horas destrói a biomecânica de quem tem musculatura fraca. Foque em glúteos, quadríceps, panturrilhas e core (2x na semana) para evitar que o joelho ou o quadril cedam depois do km 30.
+
+Respeite o Polimento Tapering: Nas últimas 2 a 3 semanas antes da prova, reduza o volume semanal em 30% a 50%, mantendo apenas alguns estímulos curtos em ritmo de prova. É nesse descanso que a supercompensação acontece e o estoque de glicogênio enche.
+
+Estratégia para o dia da prova (42k)
+O segredo dos primeiros 10 km: A adrenalina da largada faz o ritmo parecer fácil demais. Segure o freio. Correr 10 a 15 segundos por quilômetro mais rápido que o seu ritmo-alvo no início vai cobrar um preço altíssimo depois do km 32 o famoso "muro" bonk, quando o glicogênio acaba e o corpo trava.
+
+Divida a prova em blocos mentais: Não pense nos 42 km na largada. Divida em três partes:
+
+Km 0 ao 21: Aquecimento controlado. Termine a primeira metade sentindo que poderia conversar tranquilamente.
+
+Km 21 ao 32: Fase de foco e ritmo constante. Mantenha a cadência e a postura.
+
+Km 32 ao 42,2: A maratona de verdade começa aqui. É onde você usa a reserva mental que guardou na primeira metade.
+
+Protocolo rígido de nutrição e hidratação: Não espere sentir sede ou fraqueza; quando o sintoma aparece, já é tarde demais. Consuma entre 45 g e 60 g de carboidrato por hora cerca de 1 gel a cada 35–40 minutos, sempre acompanhado de água e tome água em quase todos os postos de hidratação, mesmo que sejam apenas dois goles.
+
+Prevenção de atrito: O suor seco vira sal e lixa a pele. Passe vaselina sólida ou creme anti-atrito nos pés entre os dedos, virilha, axilas e mamilos ou use esparadrapo micropore nos mamilos.
+
+Nada novo no dia: Tênis, meia, bermuda, top/camiseta e suplementação devem ter sido testados em pelo menos dois treinos longos anteriores. Costuras novas viram bolhas e assaduras severas após 3 horas de corrida.
+
+Se você já tem alguma prova-alvo em mente ou um tempo estimado de conclusão, me conte para ajustarmos as faixas de ritmo e a conta exata de géis para o percurso.
+</p></details>
+        </div>
+            <p class="lane__dist" data-leg="run">42 km</p>
+          </article>
+        </div>
+<p class="total">Todas as distancia de cada prova:<strong id="totalDist">E suas especificações.</strong></p>
+      </div>
+    </section>
+  
+    <section class="section" id="calculadora">
+      <div class="container calc">
+        <div>
+          <h2>Calculadora de ritmo</h2>
+          <p class="section__sub">Informe a distância e o tempo para ver seu pace na corrida.</p>
+        </div>
+
+        <form class="panel" id="paceForm" novalidate>
+          <div class="tabs" id="modeTabs" role="group" aria-label="Modalidade">
+            <button class="tab is-active" type="button" data-mode="run" aria-pressed="true">Corrida</button>
+          </div>
+
+          <label class="field">Distância (km)
+            <input type="number" id="distance" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 5 km">
+          </label>
+
+          <fieldset class="time">
+            <legend>Tempo total</legend>
+            <label>Horas <input type="number" id="hh" min="0" inputmode="numeric" placeholder="0"></label>
+            <label>Minutos <input type="number" id="mm" min="0" max="59" inputmode="numeric" placeholder="50"></label>
+            <label>Segundos <input type="number" id="ss" min="0" max="59" inputmode="numeric" placeholder="0"></label>
+          </fieldset>
+
+          <button class="btn" type="submit">Calcular</button>
+          <div class="result" id="result" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="sobre">
+      <div class="container about">
+        <div class="about__photos">
+          <img class="about__main" src="images/sobre-mim.png" width="587" height="853" alt="Autor do site correndo uma prova de rua">
+          <img class="about__small" src="images/corrida-avenida.png" width="580" height="787" alt="Autor em outra prova, numa avenida fechada">
+        </div>
+
+        <div>
+          <h2>Sobre mim</h2>
+          <p>Sou <strong>Jorge Alexsander</strong>, estudante de Ciência da Computação e Corredor amador,
+   apaixonado pelo dois mundos. Programação e Corrida. Código e esporte me ensinam o
+   mesmo: disciplina, constância e evoluir um pouco a cada versão.</p>
+
+          <h3>Habilidades técnicas</h3>
+          <ul class="chips">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Linguagem C</li><li>Python</li><li>Lógica de programação</li><li>Inglês intermediário</li>
+          </ul>
+          <h3>Habilidades de corrida</h3>
+          <ul class="goals">
+           <li>Como corredor de rua, desenvolvi um perfil versatil que une velocidade e alta resistencia. Com marcas consolidadas que vao
+  dos 5 km (pace de 5:37/km) e 10 km (pace de 4:40/km) ate a Meia Maratona (1h42) e a Maratona completa (3h35), minhas principais
+  habilidades envolvem o controle rigoroso de ritmo (pacing), disciplina de treinamento e resiliência mental para sustentar
+  performance constante em diferentes cenarios e distâncias .</li>
+  </ul>
+
+          <h3>Tempo de cada prova conquistada</h3>
+          <ul class="goals">
+            <li>5 km (28:03) Pace (5:37/km).</li>
+            <li>10 km (46:35) Pace(4:40/km).</li>
+            <li>21km (1h 42min) Pace (4:50/km).</li>
+            <li>21km (1h 42min) Pace (4:50/km).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <h2>Vamos conversar?</h2>
+        <p class="section__sub">Dúvidas, parcerias ou dicas de treino? Envie uma mensagem.</p>
+
+        <form class="panel" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+            <small class="error"></small>
+            <small class="counter" id="counter">0/500</small>
+          </div>
+          <button class="btn" type="submit" id="sendBtn">Enviar mensagem</button>
+          <p class="feedback" id="feedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> CorredorDev. Feito com HTML, CSS, JavaScript e muitos quilômetros.</p>
+  </footer>
+</body>
+</html>
